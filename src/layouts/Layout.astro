@@ -1,13 +1,19 @@
 ---
 export interface Props {
 	title: string;
-}
+	theme?: string;
+};
 
-const { title } = Astro.props as Props;
+import '../styles/global.css';
+
+const {
+	title,
+	theme = 'coffee',
+} = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme={theme}>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
