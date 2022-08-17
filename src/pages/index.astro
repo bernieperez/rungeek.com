@@ -1,9 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import rocket from '../assets/rocket.png';
+import Profile from '../components/Profile.astro';
 
 const title = 'Bernie Perez / Rungeek.com';
+const rocketImage = `url(${rocket})`;
 ---
 
-<Layout title={title}>
-	<p>I'm the main slot</p>
+<Layout title={title} theme="bumblebee">
+
+  <div class="min-h-screen rocket-background bg-cover bg-no-repeat bg-bottom">
+    <div class="flex">
+      <Profile />
+    </div>
+  </div>
+
 </Layout>
+
+<style define:vars={{ rocketImage }}>
+  .rocket-background {
+    background-image: var(--rocketImage);
+  }
+</style>
