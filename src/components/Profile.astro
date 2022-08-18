@@ -5,6 +5,9 @@ import snapchat from '../assets/icons/snapcodeBitmoji.svg';
 import stackoverflow from '../assets/icons/stackoverflow_32.png';
 import twitter from '../assets/icons/twitter_32.png';
 import linkedin from '../assets/icons/linkedin_32.png';
+
+// Styled button
+import Button from './Button.astro';
 ---
 
 <div class="card max-w-sm m-7 bg-primary-content text-primary shadow-xl">
@@ -15,21 +18,11 @@ import linkedin from '../assets/icons/linkedin_32.png';
     <p>My wife and I enjoy taking our dog, <a class="text-secondary" href="https://www.instagram.com/papabearyorkie/">Papa Bear</a>, on walks, being active, going outdoors, and traveling. Some of my favorite pastimes are coding personal projects, running, swimming, and CrossFit.</p>
 
     <div class="card-actions justify-center">
-      <a class="btn btn-ghost" href="http://www.facebook.com/bernieperez">
-        <img class="w-8 h-8" src={facebook} />
-      </a>
-      <a class="btn btn-ghost" href={snapchat}>
-        <img class="w-8 h-8" src={snapchat} />
-      </a>
-      <a class="btn btn-ghost" href="http://stackoverflow.com/users/1992/bernie-perez">
-        <img class="w-8 h-8" src={stackoverflow} />
-      </a>
-      <a class="btn btn-ghost" href="http://www.twitter.com/AeroBernie">
-        <img class="w-8 h-8" src={twitter} />
-      </a>
-      <a class="btn btn-ghost" href="https://www.linkedin.com/in/bernielink/details/experience/">
-        <img class="w-8 h-8" src={linkedin} />
-      </a>
+      <Button link="http://www.facebook.com/bernieperez" imgSrc={facebook} />
+      <Button link={snapchat} imgSrc={snapchat} />
+      <Button link="http://stackoverflow.com/users/1992/bernie-perez" imgSrc={stackoverflow} />
+      <Button link="http://www.twitter.com/AeroBernie" imgSrc={twitter} />
+      <Button link="https://www.linkedin.com/in/bernielink/" imgSrc={linkedin} />
     </div>
   </div>
 </div>
