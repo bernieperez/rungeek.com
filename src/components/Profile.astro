@@ -1,0 +1,64 @@
+---
+// Icons
+import { Image } from 'astro:assets';
+import facebook from '../assets/icons/facebook_32.png';
+import snapchat from '../assets/icons/snapcodeBitmoji.svg';
+import stackoverflow from '../assets/icons/stackoverflow_32.png';
+import twitter from '../assets/icons/twitter_32.png';
+import linkedin from '../assets/icons/linkedin_32.png';
+---
+
+<div class="card max-w-sm m-7 bg-primary-content text-primary shadow-xl">
+  <div class="card-body">
+    <h1 class="card-title">Bernie Perez</h1>
+
+    <p>
+      I'm Bernie a <a class="text-secondary" href="http://www.linkedin.com/in/bernielink/"
+        >Software Engineering Manager</a
+      > for <a class="text-secondary" href="https://minis.snapchat.com/">Snap Minis</a> at <a
+        class="text-secondary"
+        href="https://www.snapchat.com/">Snap Inc.</a
+      > I've studied at <a
+        class="text-secondary"
+        href="https://www.csulb.edu/college-of-engineering/computer-engineering-computer-science">CSULB</a
+      > (BS) and <a class="text-secondary" href="http://www.cs.ucla.edu/">UCLA</a> (MS). Through a Fellowship from <a
+        class="text-secondary"
+        href="http://www.aerospace.org/">The Aerospace Corporation</a
+      >, I received my <a class="text-secondary" href="http://blog.rungeek.com/post/6156085286/"
+        >M.S. in Computer Science specializing in Networking and Security</a
+      >. I've worked at amazing companies like <a class="text-secondary" href="https://www.atomtickets.com/"
+        >Atom Tickets</a
+      >, <a class="text-secondary" href="https://www.amazon.com/">Amazon</a>, <a
+        class="text-secondary"
+        href="https://www.oculus.com/">Oculus</a
+      >, and <a class="text-secondary" href="https://www.facebook.com/">Facebook</a>. Also I created a fantasy game for <a
+        class="text-secondary"
+        href="https://games.crossfit.com/">The Crossfit Games</a
+      > called <a class="text-secondary" href="https://www.fantasyfitnessdraft.com/">Fantasy Fitness Draft</a>.
+    </p>
+    <p>
+      My wife and I enjoy taking our dog, <a class="text-secondary" href="https://www.instagram.com/papabearyorkie/"
+        >Papa Bear</a
+      >, on walks, being active, going outdoors, and traveling. Some of my favorite pastimes are coding personal
+      projects, running, swimming, and CrossFit.
+    </p>
+
+    <div class="card-actions justify-center">
+      <a class="btn btn-ghost" href="http://www.facebook.com/bernieperez">
+        <Image class="w-8 h-8" src={facebook} alt="Facebook Icon"/>
+      </a>
+      <a class="btn btn-ghost" href={snapchat.src}>
+        <Image class="w-8 h-8" src={snapchat} alt="Snapchat Bitmoji"/>
+      </a>
+      <a class="btn btn-ghost" href="http://stackoverflow.com/users/1992/bernie-perez">
+        <Image class="w-8 h-8" src={stackoverflow} alt="Stackoverflow Icon"/>
+      </a>
+      <a class="btn btn-ghost" href="http://www.twitter.com/AeroBernie">
+        <Image class="w-8 h-8" src={twitter} alt="Twitter/X Icon"/>
+      </a>
+      <a class="btn btn-ghost" href="https://www.linkedin.com/in/bernielink/">
+        <Image class="w-8 h-8" src={linkedin} alt="LinkedIn Icon"/>
+      </a>
+    </div>
+  </div>
+</div>

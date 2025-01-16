@@ -1,10 +1,22 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import Profile from '../components/Profile.astro';
+import rocket from '../assets/rocket.png';
 
 const title = 'Bernie Perez / Rungeek.com';
+const rocketImage = `url(${rocket.src})`;
 ---
 
 <Layout title={title}>
-	<Welcome />
+  <div class="min-h-screen rocket-background bg-cover bg-no-repeat bg-bottom">
+    <div class="flex">
+      <Profile />
+    </div>
+  </div>
 </Layout>
+
+<style define:vars={{ rocketImage }}>
+  .rocket-background {
+    background-image: var(--rocketImage);
+  }
+</style>
