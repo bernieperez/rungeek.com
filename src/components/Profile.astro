@@ -1,64 +1,149 @@
 ---
-// Icons
 import { Image } from 'astro:assets';
-import facebook from '../assets/icons/facebook_32.png';
-import snapchat from '../assets/icons/snapcodeBitmoji.svg';
-import stackoverflow from '../assets/icons/stackoverflow_32.png';
-import twitter from '../assets/icons/twitter_32.png';
-import linkedin from '../assets/icons/linkedin_32.png';
+
+import facebookIcon from '../assets/icons/facebook_32.png';
+import snapchatIcon from '../assets/icons/snapcodeBitmoji.svg';
+import stackoverflowIcon from '../assets/icons/stackoverflow_32.png';
+import twitterIcon from '../assets/icons/twitter_32.png';
+import linkedinIcon from '../assets/icons/linkedin_32.png';
+
+const socialLinks = [
+  {
+    href: 'http://www.facebook.com/bernieperez',
+    img: facebookIcon,
+    alt: "Bernie's Facebook Profile",
+  },
+  {
+    href: snapchatIcon.src,
+    img: snapchatIcon,
+    alt: "Bernie's Snapchat Bitmoji",
+  },
+  {
+    href: 'http://stackoverflow.com/users/1992/bernie-perez',
+    img: stackoverflowIcon,
+    alt: "Bernie's Stack Overflow Profile",
+  },
+  {
+    href: 'http://www.twitter.com/AeroBernie',
+    img: twitterIcon,
+    alt: "Bernie's Twitter Profile",
+  },
+  {
+    href: 'https://www.linkedin.com/in/bernielink/',
+    img: linkedinIcon,
+    alt: "Bernie's LinkedIn Profile",
+  },
+];
 ---
 
 <div class="card max-w-sm m-7 bg-primary-content text-primary shadow-xl">
   <div class="card-body">
     <h1 class="card-title">Bernie Perez</h1>
 
-    <p>
-      I'm Bernie a <a class="text-secondary" href="http://www.linkedin.com/in/bernielink/"
-        >Software Engineering Manager</a
-      > for <a class="text-secondary" href="https://minis.snapchat.com/">Snap Minis</a> at <a
+    <p class="mb-4">
+      I'm a
+      <a
         class="text-secondary"
-        href="https://www.snapchat.com/">Snap Inc.</a
-      > I've studied at <a
+        href="http://www.linkedin.com/in/bernielink/"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+      >
+        Software Engineer
+      </a>
+      leading projects at
+      <a
         class="text-secondary"
-        href="https://www.csulb.edu/college-of-engineering/computer-engineering-computer-science">CSULB</a
-      > (BS) and <a class="text-secondary" href="http://www.cs.ucla.edu/">UCLA</a> (MS). Through a Fellowship from <a
+        href="http://www.aerospace.org/"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+      >
+        The Aerospace Corporation</a>.
+      Over the years, I've been fortunate to work at amazing companies such as
+      <a
         class="text-secondary"
-        href="http://www.aerospace.org/">The Aerospace Corporation</a
-      >, I received my <a class="text-secondary" href="http://blog.rungeek.com/post/6156085286/"
-        >M.S. in Computer Science specializing in Networking and Security</a
-      >. I've worked at amazing companies like <a class="text-secondary" href="https://www.atomtickets.com/"
-        >Atom Tickets</a
-      >, <a class="text-secondary" href="https://www.amazon.com/">Amazon</a>, <a
+        href="https://www.snapchat.com/"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+      >
+        Snap (Snapchat)</a>,
+      <a
         class="text-secondary"
-        href="https://www.oculus.com/">Oculus</a
-      >, and <a class="text-secondary" href="https://www.facebook.com/">Facebook</a>. Also I created a fantasy game for <a
+        href="https://www.atomtickets.com/"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+      >
+        Atom Tickets</a>,
+      <a
         class="text-secondary"
-        href="https://games.crossfit.com/">The Crossfit Games</a
-      > called <a class="text-secondary" href="https://www.fantasyfitnessdraft.com/">Fantasy Fitness Draft</a>.
+        href="https://www.facebook.com/"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+      >
+        Facebook</a>,
+      <a
+        class="text-secondary"
+        href="https://www.oculus.com/"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+      >
+        Oculus</a>, and
+      <a
+        class="text-secondary"
+        href="https://www.amazon.com/"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+      >
+        Amazon</a>.
+      I earned my Bachelor's and Master's degrees in Computer Science at
+      <a
+        class="text-secondary"
+        href="https://www.csulb.edu/college-of-engineering/computer-engineering-computer-science"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+      >
+        CSULB
+      </a>
+      and
+      <a
+        class="text-secondary"
+        href="https://www.cs.ucla.edu/"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+      >
+        UCLA</a>.
     </p>
-    <p>
-      My wife and I enjoy taking our dog, <a class="text-secondary" href="https://www.instagram.com/papabearyorkie/"
-        >Papa Bear</a
-      >, on walks, being active, going outdoors, and traveling. Some of my favorite pastimes are coding personal
-      projects, running, swimming, and CrossFit.
+
+    <p class="mb-4">
+      Outside of work, I enjoy spending time with my wife and our one-year-old puppy, Butters. We love to travel, stay active, try out new restaurants, and explore the outdoors. To recharge, I dive into coding, running, swimming, and CrossFit workouts. A few of my active personal projects include the
+      <a
+        class="text-secondary"
+        href="https://www.fantasyfitnessdraft.com/"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+      >
+        Fantasy Fitness Draft
+      </a>
+      and
+      <a
+        class="text-secondary"
+        href="https://rom-challenge.web.app/"
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+      >
+        ROM Challenge</a>.
     </p>
 
     <div class="card-actions justify-center">
-      <a class="btn btn-ghost" href="http://www.facebook.com/bernieperez">
-        <Image class="w-8 h-8" src={facebook} alt="Facebook Icon"/>
-      </a>
-      <a class="btn btn-ghost" href={snapchat.src}>
-        <Image class="w-8 h-8" src={snapchat} alt="Snapchat Bitmoji"/>
-      </a>
-      <a class="btn btn-ghost" href="http://stackoverflow.com/users/1992/bernie-perez">
-        <Image class="w-8 h-8" src={stackoverflow} alt="Stackoverflow Icon"/>
-      </a>
-      <a class="btn btn-ghost" href="http://www.twitter.com/AeroBernie">
-        <Image class="w-8 h-8" src={twitter} alt="Twitter/X Icon"/>
-      </a>
-      <a class="btn btn-ghost" href="https://www.linkedin.com/in/bernielink/">
-        <Image class="w-8 h-8" src={linkedin} alt="LinkedIn Icon"/>
-      </a>
+      {socialLinks.map(({ href, img, alt }) => (
+        <a
+          class="btn btn-ghost"
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
+          <Image class="w-8 h-8" src={img} alt={alt} />
+        </a>
+      ))}
     </div>
   </div>
 </div>
